@@ -30,5 +30,20 @@ namespace Arrays
             }
             return i;
         }
+
+        public static int RemoveElementRefactored(int[] nums, int val)
+        {
+            int i = 0;
+
+            for (int j = 0; j < nums.Length; j++)
+            {
+                if (nums[j] != val)
+                {
+                    // no need for actual swap
+                    nums[i++] = nums[j];
+                }
+            }
+            return i;
+        }
     }
 }
